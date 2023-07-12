@@ -6,7 +6,6 @@ import Register from './components/Register.js';
 import FaceRecognition from './components/FaceRecognition.js';
 import Logo from './components/Logo.js';
 import ImageLinkForm from './components/ImageLinkForm.js';
-import Rank from './components/Rank.js';
 import './App.css';
 
 const returnClarifaiRequestOptions = (imageURL) => {
@@ -141,10 +140,10 @@ const App = () => {
       <Logo />
       {route === 'home' ? (
         <div>
-          <Rank name={state.user.name} entries={state.user.entries} />
           <ImageLinkForm
             onInputChange={onInputChange}
             onButtonSubmit={onButtonSubmit}
+            name={state.user.name} entries={state.user.entries}
           />
           <FaceRecognition box={box} imageURL={imageURL} />
         </div>
