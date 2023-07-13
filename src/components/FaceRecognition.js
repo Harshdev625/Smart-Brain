@@ -1,15 +1,33 @@
-import React from 'react';
-import './FaceRecognition.css';
+import React from "react";
 
 const FaceRecognition = ({ imageURL, box }) => {
   return (
-    <div className='center ma'>
-      <div className='absolute mt2'>
-        <img id='inputimage'  alt='' src={imageURL} width='500px' height='auto'/>
-        <div className='bounding-box' style={{top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}}></div>
-      </div>
+    <div className="face">
+      {imageURL && (
+        <div className="face-container">
+          <img
+            id="inputimage"
+            className="face-container-img"
+            alt="SearchImage"
+            src={imageURL}
+          />
+          {Array.isArray(box) && // Check if box is an array
+            box.map((faceBox, index) => (
+              <div
+                key={index}
+                className="face-bounding-box"
+                style={{
+                  top: faceBox.topRow,
+                  right: faceBox.rightCol,
+                  bottom: faceBox.bottomRow,
+                  left: faceBox.leftCol,
+                }}
+              ></div>
+            ))}
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default FaceRecognition;

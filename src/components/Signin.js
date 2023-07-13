@@ -43,7 +43,9 @@ const Signin = ({ loadUser, onRouteChange }) => {
       <div className="container homepage">
         <p className="heading">Sign In</p>
         <div>
-          <label className="form-title" htmlFor="email-address">Email</label>
+          <label className="form-title" htmlFor="email-address">
+            Email
+          </label>
           <br />
           <input
             className="input-area"
@@ -60,7 +62,9 @@ const Signin = ({ loadUser, onRouteChange }) => {
           />
         </div>
         <div>
-          <label className="form-title" htmlFor="password">Password</label>
+          <label className="form-title" htmlFor="password">
+            Password
+          </label>
           <br />
           <input
             className="input-area"
