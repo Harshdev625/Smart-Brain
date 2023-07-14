@@ -71,7 +71,7 @@ const App = () => {
     setState((prevState) => ({
       ...prevState,
       user: {
-        id: data.id,
+        id: data._id,
         name: data.name,
         email: data.email,
         entries: data.entries,
@@ -118,7 +118,8 @@ const App = () => {
       .then((response) => {
         console.log(response);
         if (response) {
-          fetch("http://localhost:3000/image", {
+          try{
+          fetch("https://face-recognition-brain-backend.onrender.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -132,6 +133,10 @@ const App = () => {
                 user: { ...prevState.user, entries: count },
               }));
             });
+          }
+          catch (error) {
+            console.log('Error:', error);
+          }
         }
         displayFaceBox(calculateFaceLocation(response));
       })
