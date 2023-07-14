@@ -110,37 +110,46 @@ const App = () => {
 
   const onButtonSubmit = () => {
     setState((prevState) => ({ ...prevState, imageURL: prevState.input }));
-    fetch(
-      "https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs",
-      returnClarifaiRequestOptions(state.input)
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        if (response) {
-          try{
-          fetch("https://face-recognition-brain-backend.onrender.com/image", {
-            method: "put",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              id: state.user.id,
-            }),
-          })
-            .then((response) => response.json())
-            .then((count) => {
-              setState((prevState) => ({
-                ...prevState,
-                user: { ...prevState.user, entries: count },
-              }));
-            });
+
+    try {
+      fetch(
+        "https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs",
+        returnClarifaiRequestOptions(state.input)
+      )
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+          if (response) {
+            try {
+              fetch(
+                "https://face-recognition-brain-backend.onrender.com/image",
+                {
+                  method: "put",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    id: state.user.id,
+                  }),
+                }
+              )
+                .then((response) => response.json())
+                .then((count) => {
+                  setState((prevState) => ({
+                    ...prevState,
+                    user: { ...prevState.user, entries: count },
+                  }));
+                });
+            } catch (error) {
+              console.log("Error:", error);
+            }
           }
-          catch (error) {
-            console.log('Error:', error);
-          }
-        }
-        displayFaceBox(calculateFaceLocation(response));
-      })
-      .catch((error) => console.log("error", error));
+          displayFaceBox(calculateFaceLocation(response));
+        })
+        .catch((error) => {
+          console.log("Error:", error);
+        });
+    } catch (error) {
+      console.log("Error:", error);
+    }
   };
 
   const onRouteChange = (route) => {

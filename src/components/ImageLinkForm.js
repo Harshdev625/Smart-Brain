@@ -11,7 +11,7 @@ const ImageLinkForm = ({
 
   const clearInput = () => {
     clearImage();
-    inputRef.current.value = ""; // Clear the input field
+    inputRef.current.value = "";
   };
 
   return (

@@ -20,26 +20,25 @@ const Register = ({ loadUser, onRouteChange }) => {
   };
 
   const onSubmitSignIn = () => {
-    try{
-    fetch("https://face-recognition-brain-backend.onrender.com/register", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: state.email,
-        password: state.password,
-        name: state.name,
-      }),
-    })
-      .then((response) => response.json())
-      .then((user) => {
-        if (user._id) {
-          loadUser(user);
-          onRouteChange("home");
-        }
-      });
-    }
-    catch (error) {
-      console.log('Error:', error);
+    try {
+      fetch("https://face-recognition-brain-backend.onrender.com/register", {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: state.email,
+          password: state.password,
+          name: state.name,
+        }),
+      })
+        .then((response) => response.json())
+        .then((user) => {
+          if (user._id) {
+            loadUser(user);
+            onRouteChange("home");
+          }
+        });
+    } catch (error) {
+      console.log("Error:", error);
     }
   };
 

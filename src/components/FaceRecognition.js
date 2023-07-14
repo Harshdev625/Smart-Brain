@@ -11,7 +11,7 @@ const FaceRecognition = ({ imageURL, box }) => {
             alt="SearchImage"
             src={imageURL}
           />
-          {Array.isArray(box) && // Check if box is an array
+          {Array.isArray(box) &&
             box.map((faceBox, index) => (
               <div
                 key={index}
