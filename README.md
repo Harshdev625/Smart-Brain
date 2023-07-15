@@ -34,6 +34,10 @@ To run the web application locally, you need to have Node.js installed on your d
 Contributions to the Face Recognition Brain application are welcome! If you encounter any bugs, issues, or have ideas for enhancements, please open an issue on the repository. Additionally, pull requests with improvements are highly appreciated.
 
 # Tech Stack Used
+![React](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/ddf1fda1-720f-4e89-9f18-3aa3d8e2fb94)
+![javascript](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/73b36ddd-02bb-4508-8c84-57834435f04d)
+![CSS](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/94a44a9c-ef80-488d-967d-daa3ae13e201)
+![bootstrap](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/b07ea413-996a-431b-a1de-c398af6fe546)
 
 
 # Preview
