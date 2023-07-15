@@ -122,7 +122,7 @@ const App = () => {
           if (response) {
             try {
               fetch(
-                "https://face-recognition-brain-backend.onrender.com/image",
+                `${process.env.REACT_APP_SERVER}/image`,
                 {
                   method: "put",
                   headers: { "Content-Type": "application/json" },

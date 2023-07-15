@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Face Recognition Brain
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Face Recognition Brain is an application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The purpose of this application is to detect and recognize faces within images using the advanced face recognition capabilities provided by the Clarifai API. The application utilizes the Clarifai API's face detection model to accurately identify and locate faces within the provided images, providing precise bounding box coordinates for each detected face.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To run the web application locally, you need to have Node.js installed on your device. Once installed, follow these steps:
 
-### `npm start`
+1. Clone the repository: `git clone https://github.com/Harshdev625/Face-Recognition-Brain`
+2. Create an account on the [Clarifai API](https://clarifai.com/).
+3. Create a `.env` file in the root folder.
+4. In the `.env` file, create the following variables:
+   - `REACT_APP_API_PAT='Your API Key'`
+   - `REACT_APP_API_USER_ID_NAME='Your API Username'`
+   - `REACT_APP_USER_APP='Your API App Name'`
+   - `REACT_APP_SERVER='http://localhost:3000'`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   Replace `'Your API Key'`, `'Your API Username'`, and `'Your API App Name'` with your actual API key, API username, and your app name respectively. If your server is deployed elsewhere, replace `'http://localhost:3000'` with the URL of your deployed server.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. Now you are ready to start running the application. Use the following commands:
+   ```shell
+   npm install
+   npm run start
+   ```
 
-### `npm test`
+6. Face Recognition Brain is now running on localhost.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. For Backend visit [Face-Recognition-Brain-Backend-Mongo](https://github.com/Harshdev625/Face-Recognition-Brain-Backend-Mongo)
+8. Find a Picture of a Person and 'Copy image address'.
+9. Paste the Image Address into the white textbox (in the middle of the screen) and Click 'Detect' Button
+10. Watch the facial recognition box appear over the person like magic.
 
-### `npm run build`
+# Contributing
+Contributions to the Face Recognition Brain application are welcome! If you encounter any bugs, issues, or have ideas for enhancements, please open an issue on the repository. Additionally, pull requests with improvements are highly appreciated.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Tech Stack Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Preview
+<img width="959" alt="Screenshot 2023-07-15 144144" src="https://github.com/Harshdev625/NewsMonkey/assets/98793412/3c88457c-8cca-46a2-81c5-10237da8da2f">
+<img width="959" alt="Screenshot 2023-07-15 144310" src="https://github.com/Harshdev625/NewsMonkey/assets/98793412/c1dace79-2820-47ef-b24d-e84dcbe23371">
+<img width="956" alt="Screenshot 2023-07-15 144516" src="https://github.com/Harshdev625/NewsMonkey/assets/98793412/07b562f7-0937-47f8-95ba-40f0c313350f">

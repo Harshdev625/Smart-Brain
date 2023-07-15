@@ -22,7 +22,7 @@ const Signin = ({ loadUser, onRouteChange }) => {
 
   const onSubmitSignIn = () => {
     try {
-      fetch("https://face-recognition-brain-backend.onrender.com/signin", {
+      fetch(`${process.env.REACT_APP_SERVER}/signin`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

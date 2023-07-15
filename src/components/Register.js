@@ -21,7 +21,7 @@ const Register = ({ loadUser, onRouteChange }) => {
 
   const onSubmitSignIn = () => {
     try {
-      fetch("https://face-recognition-brain-backend.onrender.com/register", {
+      fetch(`${process.env.REACT_APP_SERVER}/register`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
