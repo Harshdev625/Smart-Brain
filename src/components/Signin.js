@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import Alert from "./Alert";
 
 const Signin = ({ loadUser, onRouteChange }) => {
   const [state, setState] = useState({
     signInEmail: "",
     signInPassword: "",
+    showAlert: false,
+    alertMessage: "",
   });
 
   const onEmailChange = (event) => {
@@ -21,13 +24,23 @@ const Signin = ({ loadUser, onRouteChange }) => {
   };
 
   const onSubmitSignIn = () => {
+    const { signInEmail, signInPassword } = state;
+    if (!signInEmail || !signInPassword) {
+      setState((prevState) => ({
+        ...prevState,
+        showAlert: true,
+        alertMessage: "Please enter both email and password.",
+      }));
+      return;
+    }
+
     try {
       fetch(`${process.env.REACT_APP_SERVER}/signin`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: state.signInEmail,
-          password: state.signInPassword,
+          email: signInEmail,
+          password: signInPassword,
         }),
       })
         .then((response) => response.json())
@@ -35,11 +48,25 @@ const Signin = ({ loadUser, onRouteChange }) => {
           if (user._id) {
             loadUser(user);
             onRouteChange("home");
+          } else {
+            setState((prevState) => ({
+              ...prevState,
+              showAlert: true,
+              alertMessage: "Invalid Credentials.",
+            }));
           }
         });
     } catch (error) {
       console.log("Error:", error);
     }
+  };
+
+  const handleCloseAlert = () => {
+    setState((prevState) => ({
+      ...prevState,
+      showAlert: false,
+      alertMessage: "",
+    }));
   };
 
   return (
@@ -94,6 +121,9 @@ const Signin = ({ loadUser, onRouteChange }) => {
             Sign In
           </button>
         </div>
+        {state.showAlert && (
+          <Alert message={state.alertMessage} onClose={handleCloseAlert} />
+        )}
       </div>
     </div>
   );

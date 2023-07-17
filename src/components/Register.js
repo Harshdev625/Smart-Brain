@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import Alert from "./Alert";
 
 const Register = ({ loadUser, onRouteChange }) => {
   const [state, setState] = useState({
     email: "",
     password: "",
     name: "",
+    showAlert: false,
+    alertMessage: "",
   });
 
   const onNameChange = (event) => {
@@ -19,15 +22,33 @@ const Register = ({ loadUser, onRouteChange }) => {
     setState((prevState) => ({ ...prevState, password: event.target.value }));
   };
 
+  const handleCloseAlert = () => {
+    setState((prevState) => ({
+      ...prevState,
+      showAlert: false,
+      alertMessage: "",
+    }));
+  };
+
   const onSubmitSignIn = () => {
+    const { email, password, name } = state;
+    if (!email || !password || !name) {
+      setState((prevState) => ({
+        ...prevState,
+        showAlert: true,
+        alertMessage: "Please fill in all the fields.",
+      }));
+      return;
+    }
+
     try {
       fetch(`${process.env.REACT_APP_SERVER}/register`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: state.email,
-          password: state.password,
-          name: state.name,
+          email,
+          password,
+          name,
         }),
       })
         .then((response) => response.json())
@@ -113,6 +134,9 @@ const Register = ({ loadUser, onRouteChange }) => {
             Register
           </button>
         </div>
+        {state.showAlert && (
+          <Alert message={state.alertMessage} onClose={handleCloseAlert} />
+        )}
       </div>
     </div>
   );

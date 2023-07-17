@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Alert from "./Alert";
 
 const ImageLinkForm = ({
   onInputChange,
@@ -8,10 +9,23 @@ const ImageLinkForm = ({
   clearImage,
 }) => {
   const inputRef = useRef(null);
+  const [showAlert, setShowAlert] = useState(false);
 
   const clearInput = () => {
     clearImage();
     inputRef.current.value = "";
+  };
+
+  const handleButtonSubmit = () => {
+    if (!inputRef.current.value) {
+      setShowAlert(true);
+    } else {
+      onButtonSubmit();
+    }
+  };
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
   };
 
   return (
@@ -20,7 +34,7 @@ const ImageLinkForm = ({
         <h3 className="text-style">
           {`${name},Your Current Rank Is`}
           <br />
-          <h1>{entries}</h1>
+          <h1>#{entries}</h1>
           "This Magic Brain will detect faces in your pictures. Give it a try."
         </h3>
         <div className="container form">
@@ -31,7 +45,7 @@ const ImageLinkForm = ({
             onChange={onInputChange}
           />
           <br />
-          <button className="detect-box" onClick={onButtonSubmit}>
+          <button className="detect-box" onClick={handleButtonSubmit}>
             Detect
           </button>
           <button className="detect-box" onClick={clearInput}>
@@ -39,6 +53,12 @@ const ImageLinkForm = ({
           </button>
         </div>
       </div>
+      {showAlert && (
+        <Alert
+          message="Please enter the image link address."
+          onClose={handleCloseAlert}
+        />
+      )}
     </div>
   );
 };
