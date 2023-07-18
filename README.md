@@ -18,7 +18,7 @@ To run the web application locally, you need to have Node.js installed on your d
    Replace `'Your API Key'`, `'Your API Username'`, and `'Your API App Name'` with your actual API key, API username, and your app name respectively. If your server is deployed elsewhere, replace `'http://localhost:3000'` with the URL of your deployed server.
 
 5. Now you are ready to start running the application. Use the following commands:
-   ```shell
+   ``` shell
    npm install
    npm run start
    ```
@@ -26,21 +26,23 @@ To run the web application locally, you need to have Node.js installed on your d
 6. Face Recognition Brain is now running on localhost.
 
 7. For Backend visit [Face-Recognition-Brain-Backend-Mongo](https://github.com/Harshdev625/Face-Recognition-Brain-Backend-Mongo)
-8. Find a Picture of a Person and 'Copy image address'.
-9. Paste the Image Address into the white textbox (in the middle of the screen) and Click 'Detect' Button
+8. Find a Picture of a Person and 'Copy the image address'.
+9. Paste the Image Address into the white textbox (in the middle of the screen) and Click the 'Detect' Button
 10. Watch the facial recognition box appear over the person like magic.
 
-# Contributing
-Contributions to the Face Recognition Brain application are welcome! If you encounter any bugs, issues, or have ideas for enhancements, please open an issue on the repository. Additionally, pull requests with improvements are highly appreciated.
-
 # Tech Stack Used
-![React](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/ddf1fda1-720f-4e89-9f18-3aa3d8e2fb94)
-![javascript](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/73b36ddd-02bb-4508-8c84-57834435f04d)
+![HTML](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/ace2021c-62ef-4854-b7f2-732afa9b9c66)
 ![CSS](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/94a44a9c-ef80-488d-967d-daa3ae13e201)
+![javascript](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/73b36ddd-02bb-4508-8c84-57834435f04d)
 ![bootstrap](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/b07ea413-996a-431b-a1de-c398af6fe546)
-
+![React](https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/ddf1fda1-720f-4e89-9f18-3aa3d8e2fb94)
 
 # Preview
-<img width="959" alt="Screenshot 2023-07-15 144144" src="https://github.com/Harshdev625/NewsMonkey/assets/98793412/3c88457c-8cca-46a2-81c5-10237da8da2f">
-<img width="959" alt="Screenshot 2023-07-15 144310" src="https://github.com/Harshdev625/NewsMonkey/assets/98793412/c1dace79-2820-47ef-b24d-e84dcbe23371">
-<img width="956" alt="Screenshot 2023-07-15 144516" src="https://github.com/Harshdev625/NewsMonkey/assets/98793412/07b562f7-0937-47f8-95ba-40f0c313350f">
+https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/2fe93e85-fdc7-4248-a97f-2c90ef4965dc
+
+# Contributing
+Contributions to the Face Recognition Brain application are welcome! If you encounter any bugs or issues or have ideas for enhancements, please open an issue on the repository. Additionally, pull requests with improvements are highly appreciated.
+
+<p align='center'>
+(If you liked the project, give it a star 😃)
+</p>
