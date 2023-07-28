@@ -34,8 +34,8 @@ const ImageLinkForm = ({
         <h3 className="text-style">
           {`${name},Your Current Rank Is`}
           <br />
-          <h1>#{entries}</h1>
-          "This Magic Brain will detect faces in your pictures. Give it a try."
+          <p className='rank-count'>#{entries}</p>
+          <p>"This Magic Brain will detect faces in your pictures. Give it a try."</p>
         </h3>
         <div className="container form">
           <input
@@ -43,6 +43,7 @@ const ImageLinkForm = ({
             className="search-box"
             type="text"
             onChange={onInputChange}
+            placeholder='Enter the Image Link Address'
           />
           <br />
           <button className="detect-box" onClick={handleButtonSubmit}>
