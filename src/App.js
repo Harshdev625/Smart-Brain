@@ -3,7 +3,7 @@ import ParticlesBg from "particles-bg";
 import Navigation from "./components/Navigation.js";
 import Signin from "./components/Signin.js";
 import Register from "./components/Register.js";
-import FaceRecognition from "./components/FaceRecognition.js";
+import FaceDetection from "./components/FaceDetection.js";
 import Logo from "./components/Logo.js";
 import ImageLinkForm from "./components/ImageLinkForm.js";
 
@@ -177,7 +177,7 @@ const App = () => {
             entries={state.user.entries}
             clearImage={clearImage}
           />
-          <FaceRecognition
+          <FaceDetection
             box={box}
             imageURL={imageURL}
             clearImage={clearImage}

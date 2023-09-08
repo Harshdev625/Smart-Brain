@@ -1,6 +1,6 @@
 import React from "react";
 
-const FaceRecognition = ({ imageURL, box }) => {
+const FaceDetection = ({ imageURL, box }) => {
   return (
     <div className="face">
       {imageURL && (
@@ -30,4 +30,4 @@ const FaceRecognition = ({ imageURL, box }) => {
   );
 };
 
-export default FaceRecognition;
+export default FaceDetection;

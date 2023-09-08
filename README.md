@@ -1,6 +1,6 @@
-# Face Recognition Brain
+# Smart Brain
 
-Face Recognition Brain is an application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The purpose of this application is to detect and recognize faces within images using the advanced face recognition capabilities provided by the Clarifai API. The application utilizes the Clarifai API's face detection model to accurately identify and locate faces within the provided images, providing precise bounding box coordinates for each detected face.
+Smart Brain is an application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The purpose of this application is to detect and recognize faces within images using the advanced face recognition capabilities provided by the Clarifai API. The application utilizes the Clarifai API's face detection model to accurately identify and locate faces within the provided images, providing precise bounding box coordinates for each detected face.
 
 ## Installation
 
@@ -23,7 +23,7 @@ To run the web application locally, you need to have Node.js installed on your d
    npm run start
    ```
 
-6. Face Recognition Brain is now running on localhost.
+6. Smart Brain is now running on localhost.
 
 7. For Backend visit [Face-Recognition-Brain-Backend-Mongo](https://github.com/Harshdev625/Face-Recognition-Brain-Backend-Mongo)
 8. Find a Picture of a Person and 'Copy the image address'.
@@ -41,7 +41,7 @@ To run the web application locally, you need to have Node.js installed on your d
 https://github.com/Harshdev625/Face-Recognition-Brain/assets/98793412/2fe93e85-fdc7-4248-a97f-2c90ef4965dc
 
 # Contributing
-Contributions to the Face Recognition Brain application are welcome! If you encounter any bugs or issues or have ideas for enhancements, please open an issue on the repository. Additionally, pull requests with improvements are highly appreciated.
+Contributions to the Smart Brain application are welcome! If you encounter any bugs or issues or have ideas for enhancements, please open an issue on the repository. Additionally, pull requests with improvements are highly appreciated.
 
 <p align='center'>
 (If you liked the project, give it a star 😃)
